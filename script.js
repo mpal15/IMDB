@@ -1,7 +1,7 @@
 //first card
  var card_body = document.querySelector('.card-body1');
  var img_poster = document.querySelector('.poster');
- var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=ant-man')
+ var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=ant-man')
 .then(res=>{
    return res.json();
 }).then(data=>{
@@ -19,7 +19,7 @@
 //second card
 var card_body2 = document.querySelector('.card-body2');
 var img_poster2 = document.querySelector('.poster2');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=spider-man')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=spider-man')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -37,7 +37,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=spider-man')
 //third card
 var card_body3 = document.querySelector('.card-body3');
 var img_poster3 = document.querySelector('.poster3');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=Avenger')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=Avenger')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -55,7 +55,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=Avenger')
 //four card
 var card_body4 = document.querySelector('.card-body4');
 var img_poster4 = document.querySelector('.poster4');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=avengers:endgame')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=avengers:endgame')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -73,7 +73,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=avengers:endgame')
 //five card
 var card_body5 = document.querySelector('.card-body5');
 var img_poster5 = document.querySelector('.poster5');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=titanic')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=titanic')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -91,7 +91,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=titanic')
 //Six card
 var card_body6 = document.querySelector('.card-body6');
 var img_poster6 = document.querySelector('.poster6');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=Avatar')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=Avatar')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -109,7 +109,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=Avatar')
 //Seven card
 var card_body7 = document.querySelector('.card-body7');
 var img_poster7 = document.querySelector('.poster7');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=iron-man')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=iron-man')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -127,7 +127,7 @@ var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=iron-man')
 //Eight card
 var card_body8 = document.querySelector('.card-body8');
 var img_poster8 = document.querySelector('.poster8');
-var data = fetch('http://www.omdbapi.com/?apikey=15aa753c&t=joker')
+var data = fetch('https://www.omdbapi.com/?apikey=15aa753c&t=joker')
 .then(res=>{
   return res.json();
 }).then(data=>{
@@ -176,7 +176,7 @@ var fav_btn = document.getElementById("Fav_btn").onclick = async function(){
     parentElement.removeChild(parentElement.firstChild);
   }
   for(var i = 0; i < data.length; i++){
-    var res = await fetch(`http://www.omdbapi.com/?apikey=15aa753c&t=${data[i]}`);
+    var res = await fetch(`https://www.omdbapi.com/?apikey=15aa753c&t=${data[i]}`);
     var d = await res.json();
      //card
    var card = document.createElement('div');
@@ -286,7 +286,7 @@ var Home_btn = document.getElementById('home').onclick = function(){
 
 
 
-// searchInput.innerHTML = fetch(`http://www.omdbapi.com/?apikey=15aa753c&s=${searchInput.value}`);
+// searchInput.innerHTML = fetch(`https://www.omdbapi.com/?apikey=15aa753c&s=${searchInput.value}`);
 // add event listener to the button
 // searchButton.addEventListener('click', function() {
 //   // get the search input value
@@ -300,7 +300,7 @@ searchButton.addEventListener('click',async function(event) {
    event.preventDefault();
    var value = searchInput.value;
 
-  var res = await fetch(`http://www.omdbapi.com/?apikey=15aa753c&s=${value}`);
+  var res = await fetch(`https://www.omdbapi.com/?apikey=15aa753c&s=${value}`);
   var data = await res.json();
   console.log(data);
   var main_section = document.getElementsByClassName('main-section')[0];
