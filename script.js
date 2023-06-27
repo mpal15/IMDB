@@ -386,7 +386,7 @@ bodydiv.appendChild(more_btn);
  
    favourite_btn.addEventListener('click',async function(e){
        var Title = e.target.getAttribute('id');
-     var apiurl = await fetch(`http://www.omdbapi.com/?apikey=15aa753c&t=${Title}`);
+     var apiurl = await fetch(`https://www.omdbapi.com/?apikey=15aa753c&t=${Title}`);
      var data = await apiurl.json();
      console.log(data);
      if(movies.includes(Title)){
